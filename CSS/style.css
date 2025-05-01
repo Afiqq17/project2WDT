@@ -17,6 +17,36 @@ body.body1 {
   max-width: 95%;
 }
 
+.custom-card {
+  background-color: #f8f9fa; 
+  border: 5px solid #ddd;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.custom-title {
+  font-size: 1.2rem;
+  color: #2c3e50; 
+  margin-bottom: 0.5rem;
+}
+
+.custom-designation {
+  font-size: 0.5rem;
+  color: #e74c3c; 
+  margin-bottom: 0.25rem;
+  font-weight: bold;
+}
+
+.custom-description {
+  font-size: 0.85rem;
+  color: #555; 
+}
+
+.card-img-top {
+  object-fit: cover;
+  height: 250px;
+}
+
 h1 {
   opacity: 0.8;
   font-family: 'poppins', fantasy;
