@@ -15,7 +15,7 @@ body.body1 {
 
 h1 {
   opacity: 0.8;
-  font-family: fantasy;
+  font-family: 'poppins', fantasy;
   font-size: 2.5em;
   text-align: center;
   margin-top: 0.5em;
@@ -36,7 +36,7 @@ h1 {
 }
 
 .hero h2 {
-  font-family: fantasy;
+  font-family: 'poppins', fantasy;
   font-size: 1.8em;
   color: black;
   text-align: center;
@@ -45,7 +45,7 @@ h1 {
 }
 
 .What {
-  font-family: fantasy;
+  font-family:'poppins', fantasy;
   font-size: 1.8em;
   color: black;
   text-align: center;
@@ -109,22 +109,22 @@ h1 {
 
 /* Basic styling for the horizontal navigation */
 .navbar {
-  margin-bottom: 1em; /* Add some space below the navbar */
+  margin-bottom: 1em;
 }
 
 .navbar-nav {
-  display: flex; /* Make the list items display in a row */
-  flex-direction: row; /* Ensure horizontal alignment */
-  justify-content: center; /* Center the navigation items */
-  width: 100%; /* Take full width */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
 }
 
 .navbar-nav .nav-item {
-  margin: 0 0.5em; /* Add some horizontal spacing between items */
+  margin: 0 0.5em;
 }
 
 .navbar-nav .nav-link {
-  padding: 0.5em 1em; /* Adjust padding for better touch targets */
+  padding: 0.5em 1em;
 }
 
 /* Hide the default dropdown menu */
@@ -132,26 +132,21 @@ h1 {
   display: none;
 }
 
-/* Media query for smaller screens to revert to a dropdown (optional) */
+/* Media query for smaller screens  */
 @media (max-width: 768px) {
   .navbar-nav {
-    flex-direction: column; /* Stack items vertically on smaller screens */
-    align-items: center; /* Center items in the column */
+    flex-direction: column;  /* Stack items vertically */
+    align-items: flex-start;  /* Align items to the start */
   }
 
   .navbar-nav .nav-item {
-    margin: 0.2em 0; /* Add vertical spacing on smaller screens */
-    width: 100%; /* Make each item take full width */
-    text-align: center; /* Center text in the items */
+    margin: 0.2em 0;
+    width: 100%;
+    text-align: left; /* Align text to the left */
   }
 
-  /* Show the dropdown menu again */
   .dropdown {
     display: block;
-    margin-bottom: 1em; /* Add some space below the dropdown */
-  }
-
-  .navbar {
-    display: none; /* Hide the horizontal navbar on smaller screens */
+    margin-bottom: 1em;
   }
 }
