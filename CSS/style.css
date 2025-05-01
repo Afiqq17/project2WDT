@@ -1,61 +1,61 @@
 body.body1 {
   background: rgb(255, 255, 255);
   background-repeat: no-repeat;
-  background-size: cover; /* Changed to 'cover' for better responsiveness */
+  background-size: cover;
 }
 
 .index {
   border: 1px solid black;
   border-radius: 12px;
-  margin: 20px auto; /* Added top/bottom margin for better spacing */
+  margin: 20px auto;
   background-color: whitesmoke;
   padding: 20px;
-  max-width: 95%; /* Added max-width for better responsiveness on larger screens */
+  max-width: 95%;
 }
 
 h1 {
   opacity: 0.8;
   font-family: fantasy;
-  font-size: 2.5em; /* Using em for better scalability */
+  font-size: 2.5em;
   text-align: center;
   margin-top: 0.5em;
-  margin-bottom: 0.5em; /* Added some bottom margin */
+  margin-bottom: 0.5em;
   color: black;
   background-color: aqua;
-  padding: 0.5em; /* Added some padding */
-  border-radius: 5px; /* Added border-radius to match index */
+  padding: 0.5em;
+  border-radius: 5px;
 }
 
 .hero p {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: black;
-  column-count: 2; /* Force two columns on all screen sizes */
+  column-count: 2;
   column-rule-style: solid;
-  font-size: 0.9em; /* Slightly reduced default font size */
-  line-height: 1.4; /* Improved default line height */
+  font-size: 0.9em;
+  line-height: 1.4;
 }
 
 .hero h2 {
   font-family: fantasy;
-  font-size: 1.8em; /* Using em for better scalability */
+  font-size: 1.8em;
   color: black;
-  text-align: center; /* Ensured alignment */
-  margin-top: 1em; /* Added some top margin */
-  margin-bottom: 0.5em; /* Added some bottom margin */
+  text-align: center;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
 }
 
 .What {
   font-family: fantasy;
-  font-size: 1.8em; /* Using em for better scalability */
+  font-size: 1.8em;
   color: black;
-  text-align: center; /* Ensured alignment */
-  margin-top: 1.5em; /* Added more top margin for spacing */
-  margin-bottom: 0.5em; /* Added some bottom margin */
+  text-align: center;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
 }
 
 .slideshow-container {
-  max-width: 90%; /* Made it responsive within the index container */
-  margin: 1em auto; /* Added vertical margin */
+  max-width: 90%;
+  margin: 1em auto;
 }
 
 .mySlides {
@@ -71,15 +71,15 @@ h1 {
 
 .text {
   color: white;
-  font-size: 0.8em; /* Scaled down text size */
+  font-size: 0.8em;
   padding: 0.5em;
   position: absolute;
   bottom: 0.5em;
   background: rgba(0, 0, 0, 0.6);
   width: 100%;
   text-align: center;
-  border-bottom-left-radius: 10px; /* Added matching border-radius */
-  border-bottom-right-radius: 10px; /* Added matching border-radius */
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 .fade {
@@ -100,76 +100,58 @@ h1 {
   color: white;
   text-decoration: none;
   border-radius: 5px;
-  font-size: 0.8em; /* Scaled down font size */
+  font-size: 0.8em;
 }
 
 #topLink:hover {
   background-color: #2980b9;
 }
 
-/* Media Query for screens with a maximum width of 768 pixels (typical for phones) */
-@media (max-width: 768px) {
-  h1 {
-    font-size: 2em; /* Slightly smaller heading on mobile */
-    margin-top: 0.3em;
-    margin-bottom: 0.3em;
-  }
-
-  .hero h2 {
-    font-size: 1.5em; /* Slightly smaller subheading on mobile */
-    margin-top: 0.8em;
-    margin-bottom: 0.3em;
-  }
-
-  /* Force two columns even on mobile */
-  .hero p {
-    font-size: 0.9em; /* Keep a slightly smaller font size */
-    line-height: 1.2; /* Adjust line height for tighter spacing */
-  }
-
-  .What {
-    font-size: 1.5em; /* Slightly smaller "What We Do?" on mobile */
-    margin-top: 1em;
-    margin-bottom: 0.3em;
-  }
-
-  .slideshow-container {
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-  }
-
-  .text {
-    font-size: 0.9em; /* Slightly adjusted text size in slideshow */
-    padding: 0.8em;
-    bottom: 0.8em;
-  }
-
-  #topLink {
-    font-size: 1em; /* Slightly adjusted "Top" link size */
-    padding: 0.8em;
-  }
+/* Basic styling for the horizontal navigation */
+.navbar {
+  margin-bottom: 1em; /* Add some space below the navbar */
 }
 
-/* You can add more specific adjustments for even smaller screens if needed */
-@media (max-width: 480px) {
-  h1 {
-    font-size: 1.8em;
+.navbar-nav {
+  display: flex; /* Make the list items display in a row */
+  flex-direction: row; /* Ensure horizontal alignment */
+  justify-content: center; /* Center the navigation items */
+  width: 100%; /* Take full width */
+}
+
+.navbar-nav .nav-item {
+  margin: 0 0.5em; /* Add some horizontal spacing between items */
+}
+
+.navbar-nav .nav-link {
+  padding: 0.5em 1em; /* Adjust padding for better touch targets */
+}
+
+/* Hide the default dropdown menu */
+.dropdown {
+  display: none;
+}
+
+/* Media query for smaller screens to revert to a dropdown (optional) */
+@media (max-width: 768px) {
+  .navbar-nav {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    align-items: center; /* Center items in the column */
   }
 
-  .hero h2 {
-    font-size: 1.3em;
+  .navbar-nav .nav-item {
+    margin: 0.2em 0; /* Add vertical spacing on smaller screens */
+    width: 100%; /* Make each item take full width */
+    text-align: center; /* Center text in the items */
   }
 
-  .What {
-    font-size: 1.3em;
+  /* Show the dropdown menu again */
+  .dropdown {
+    display: block;
+    margin-bottom: 1em; /* Add some space below the dropdown */
   }
 
-  .hero p {
-    font-size: 0.75em; /* Further reduce font size for very small screens */
-    line-height: 1.1; /* Even tighter line height */
-  }
-
-  .text {
-    font-size: 0.85em;
+  .navbar {
+    display: none; /* Hide the horizontal navbar on smaller screens */
   }
 }
